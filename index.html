@@ -5,12 +5,90 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>soon</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
 </head>
 <body>
-	<div class="info"><h1 onclick="message1()" style="font-size: 32px;">soon</h1></div>
-	<div class="message">
-		<p>The project is being finalized</p>
+<nav>
+		<img src="img/inlinera-logo-white.png" alt="logo">
+		<div class="links">
+	    <a href="#skills">Skills</a>
+	    <a href="#">My works</a></div>
+	<div class="menu-btn">
+		<span></span>
+		<span></span>
+		<span></span>
+</div>
+</nav>
+<div class="container">
+	<div class="head">
+		<div class="head__shadow">
+			<h1>Hi, I'm Inlinera,<br>Website Layout Designer/ <br>Frontend Developer from Russia
+			</h1>
+		</div>
 	</div>
-	<script type="text/javascript" src="js/index.js"></script>
+</div>
+<div class="content">
+	<div class="content__mini_btn" id="skills">
+	<span onclick="hideContent()" id="span">></span><h2 onclick="hideContent()">Languages and Technologies</h2><span onclick="hideContent()" id="span1">></span>
+</div>
+<div class="content__allblocks">
+	<div class="content__block1">
+		<div class="block__shadow">
+		<h2>Javascript</h2>
+		<p>JavaScript is a high-level interpreted programming language that is primarily used as a scripting language for web development. It is one of the three main technologies of the World Wide Web, along with HTML and CSS.<br>
+The JavaScript programming language allows you to create interactive web pages and is an integral part of web applications. While HTML defines the structure and layout of a web page, and CSS gives it style, JavaScript makes it interactive by providing dynamic content and user interaction.</p>
+	</div>
+	</div>
+	<div class="content__block2">
+		<div class="block__shadow1">
+			<h2>Css</h2>
+			<p>CSS (Cascading Style Sheets) is a language for describing the appearance of an HTML document. This is one of the basic technologies of the modern Internet. Almost no website can function without CSS, which is why HTML and CSS work together.<br>
+Cascading Style Sheets work with HTML, but it's a completely different language. HTML structures the document and organizes information, and CSS interacts with the browser to give the document its appearance</p>
+		</div>
+	</div>
+	<div class="content__block3">
+		<div class="block__shadow2">
+		<h2>Html</h2>
+		<p>HTML (Hypertext Markup Language) is a hypertext markup language. This is necessary to place elements on a web page: text, images, tables and videos.<br>
+When you visit a website, the browser downloads an HTML file containing information about the structure and content of the web page. HTML, as it were, builds the visual basis of the site, but does not “launch” the site on its own. It simply specifies where the elements are located, what their basic design will be, and where the elements' styles and scripts will come from</p>
+	</div>
+	</div>
+	<div class="content__block4">
+		<div class="block__shadow3">
+			<h2>Git</h2>
+			<p>Git is a version control system. Git is a distributed version control system, which means that it does not have a single central server and allows multiple developers to work together without interfering with each other. Git also has features like branching, tagging, and commit history that help developers manage changes to their code and see who made what changes.</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="content2">
+	<h2>Examples of My work</h2>
+	<div class="projects">
+	<button
+    class="openDialogBtn button-violet"
+    type="button"
+    aria-haspopup="dialog"
+    aria-controls="myDialog">
+    	
+    </button>
+  <dialog class="child" id="myDialog">
+    <div class="dialog__wrapper">
+     <a href="#">open</a><br>
+     <div class="image-album1">
+     	
+     </div>
+      <button
+        class="closeDialogBtn button-black"
+        type="button"
+      >close
+      </button>
+    </div>
+  </dialog></div>
+</div>
+<footer>
+	<h3>Inlinera, 2024</h3>
+	<a href="#">GitHub</a>
+</footer>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

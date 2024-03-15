@@ -1,21 +1,323 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+html{
+	scroll-behavior: smooth;
+}
 body{
 	font-family: "Open Sans", sans-serif;
+	padding: 0;
+	margin: 0;
 }
-.info, .message{
+a{
+	text-decoration: none;
+}
+nav{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 65px;
+	display: flex;
+	align-items: center;
+	background: #00CED1;
+	font-family: "Kanit", sans-serif;
+}
+nav img{
+	height: 60px;
+	margin-left: 15px;
+}
+nav a{
+	margin-left: 75px;
+	color: #fff;
+	font-size: 29px;
+	font-weight: 500;
+	position: relative;
+}
+.links a:first-child{
+	margin-left: 120px;
+}
+nav a:before{
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	transform: scaleX(0);
+	transition: transform .2s;
+}
+nav a:hover:before {
+	transform: scaleX(1.0);
+	transition: transform .2s;
+}
+::selection{
+	background-color: transparent;
+	color: #4169E1;
+}
+/*burger*/ 
+.menu-btn{
+		height: 30px;
+		width: 30px;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+		float: right;
+		margin-left: 45%;
+}
+.menu-btn span{
+		width: 35px;
+		height: 3px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50% -50%);
+		background-color: #fff;
+		transition: all 0.5s;
+}
+.menu-btn span:nth-child(2){
+	top: calc(50% - 5px);
+		}
+.menu-btn span:nth-child(3){
+	top: calc(50% + 5px);
+}
+.links.active {
+			transform: translateX(0);
+	}
+/**/
+.container{
+	position: relative;
+	display: grid;
+	margin-bottom: 10%;
+	overflow: hidden;
+}
+.head{
+	background: url('../img/banner-img-1.jpg') no-repeat;
+	height: 500px;
+	background-size: 110%;
+	position: relative;
+	margin-top: 3%;
+	overflow: hidden;
+}
+.head .head__shadow{
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	line-height: 2.1;
+	letter-spacing: 2px;
+	position: relative;
+}
+.head__shadow h1{
+	padding: 7% 5%;
+	color: #fff;
+	font-size: 35px;
+}
+.content {
+	position: relative;
+	display: grid;
+	width: 100%;
 	text-align: center;
-	transition: all .5s;
 }
-.info:hover{
+.content__mini_btn{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	font-size: 21px;
+	justify-content: center;
+	transition: all .3s;
+}
+.content__mini_btn span{
+margin: 0 9px;
+font-size: 25px;
+font-weight: 800;
+transform: rotate(-90deg);
+transition: all .5s;
+}
+.content__mini_btn span,
+.content__mini_btn h2:hover{
+cursor: pointer;
+}
+/*Подобные изображения на заднем фоне
+были задуманы изначально*/
+.content__block1, .content__block2,
+.content__block3, .content__block4{
+	display: flex;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	transition: all .3s;
+}
+.content__block1{
+	background: url('../img/js-banner.jpg') no-repeat;
+	background-size: 100%;
+	margin-top: 0;
+}
+.content__block2{
+	background: url('../img/css-banner.jpg') no-repeat;
+	background-size: 100%;
+	margin-top: 0;
+}
+.content__block3{
+	background: url('../img/html-banner.jpg') no-repeat;
+	background-size: 100%;
+	margin-top: 0;
+}
+.content__block4{
+	background: url('../img/git-banner.jpg') no-repeat;
+    background-size: 100%;
+    margin-top: 0;
+}
+.block__shadow, .block__shadow1,
+.block__shadow2, .block__shadow3{
+background-color: rgba(0, 0, 0, 0.3);
+width: 100%;
+color: #fff;
+}
+.block__shadow h2,
+.block__shadow1 h2,
+.block__shadow2 h2,
+.block__shadow3 h2{
+	font-size: 35px;
+	float: left;
+	margin: 2% 6%;
+	text-shadow: 0 0 10px #fff;
+}
+.block__shadow h2::first-letter{
+	font-size: 40px;
+	color: #F0E68C;
+}
+.block__shadow1 h2::first-letter{
+	font-size: 40px;
+	color: rgba(135, 206, 235, 0.8);
+}
+.block__shadow2 h2::first-letter{
+	font-size: 40px;
+	color: #FFA500;
+}
+.block__shadow3 h2::first-letter{
+font-size: 40px;
+color: #DC143C;
+}
+.block__shadow p,
+.block__shadow1 p,
+.block__shadow2 p,
+.block__shadow3 p{
+	font-size: 22px;
+	float: left;
+	text-align: left;
+	margin: 2% 6%;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+.content__block1.active{
+	margin-top: 0;
+}
+.content__block2.active,
+.content__block3.active,
+.content__block4.active{
+	margin-top: -400px;
+	transition: all .3s;
+}
+.content__allblocks{
+	opacity: 1;
+	transition: all .3s;
+}
+.content__allblocks.active{
+	opacity: 0;
+	transition: all .3s;
+}
+#span.active, #span1.active{
+	transition: all .5s;
+	transform: rotate(90deg);
+}
+.content2{
+	display: grid;
+	align-items: center;
+	text-align: center;
+}
+dialog{
+  position: fixed;
+  height: 490px;
+  width: 50%;
+  align-items: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: #000000;
+  text-align: center;
+}
+.openDialogBtn{
+	justify-content: center;
+background: #A9A9A9;
+  bottom: 50px;
+  right: 50px;
+  min-width: 210px;
+  max-width: 400px;
+  min-height: 190px;
+  max-height: 280px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  transition: background-color 0.2s linear;
+}
+.openDialogBtn:hover{
 	cursor: pointer;
 }
-.message{
-	opacity: 0;
-	margin-top: 1%;
-	font-size: 21px;
+.closeDialogBtn{
+  margin: 15% auto 0;
+  border: 2px solid transparent;
+  min-width: 100%;
+  border-radius: 6px;
+  padding: 9px 15px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color 0.2s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 }
-.message.active{
-	opacity: 1;
-	margin-top: 6%;
-	transition: all .5s;
+.dialog__wrapper{
+  padding: 1em;
+}
+.dialog__wrapper a{
+	color: #fff;
+	font-size: 19px;
+	font-weight: 600;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.scroll-lock, .scroll-lock1 {
+  overflow: hidden;
+}
+.image-album1{
+	height: 290px;
+	width: 100%;
+	border: 1px solid #000;
+	background-color: #fff;
+}
+.projects{
+ display: flex;
+ justify-content: center;
+ width: 100%;
+ margin-top: 5%;
+}
+footer{
+	position: relative;
+	display: flex;
+	border-top: 2px solid #000;
+	margin-top: 10%;
+	align-items: center;
+	background: #00CED1;
+}
+footer h3{
+	margin: 3% 5%;
+}
+footer a{
+color: #000;
+margin-left: 50%;
+font-size: 20px;
+}
+footer a:hover{
+	color: orange;
 }
