@@ -3,16 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>soon</title>
+	<title>Inlinera</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<link rel="icon" href="img/icon.png">
 </head>
 <body>
 <nav>
 		<img src="img/inlinera-logo-white.png" alt="logo">
 		<div class="links">
 	    <a href="#skills">Skills</a>
-	    <a href="#">My works</a></div>
+	    <a href="#MyWorks">My works</a></div>
 	<div class="menu-btn">
 		<span></span>
 		<span></span>
@@ -61,33 +62,35 @@ When you visit a website, the browser downloads an HTML file containing informat
 	</div>
 </div>
 </div>
-<div class="content2">
+<div class="content2" id="MyWorks">
 	<h2>Examples of My work</h2>
 	<div class="projects">
-	<button
-    class="openDialogBtn button-violet"
-    type="button"
-    aria-haspopup="dialog"
-    aria-controls="myDialog">
-    	
-    </button>
-  <dialog class="child" id="myDialog">
-    <div class="dialog__wrapper">
-     <a href="#">open</a><br>
-     <div class="image-album1">
-     	
-     </div>
-      <button
-        class="closeDialogBtn button-black"
-        type="button"
-      >close
-      </button>
-    </div>
-  </dialog></div>
+		<button class="openModalBtn1" onclick="openModal1()"></button>
+ <div class="modal1">
+ 	<div class="modal__info1">
+ 		<a href="#">open</a><br>
+ 		<div class="image-album1">
+ 			
+ 		</div>
+ 		<button class="closeModalBtn1" onclick="closeModal1()">close</button>
+ 	</div>
+ </div>
+  <button class="openModalBtn" onclick="openModal()"></button>
+ <div class="modal">
+ 	<div class="modal__info">
+ 		<a href="#">open</a><br>
+ 		<div class="image-album2">
+ 			
+ 		</div>
+ 		<button class="closeModalBtn" onclick="closeModal()">close</button>
+ 	</div>
+ </div>
+</div>
 </div>
 <footer>
 	<h3>Inlinera, 2024</h3>
-	<a href="#">GitHub</a>
+	<a href="https://github.com/inlinera" target="_blank">GitHub</a><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" height="30px">
+          
 </footer>
 <script type="text/javascript" src="js/index.js"></script>
 </body>

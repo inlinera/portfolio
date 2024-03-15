@@ -108,6 +108,11 @@ nav a:hover:before {
 footer a{
 margin-left: 30%;
 }
+.modal__info, .modal__info1{
+	width: 350px;
+	height: 450px;
+	padding: 50px;
+}
 }
 @media(max-width: 495px){
 	.head{
@@ -155,6 +160,33 @@ nav{
 nav img{
 	height: 40px;
 }
+.modal__info, .modal__info1{
+	width: 310px;
+	height: 440px;
+	padding: 50px;
+}
+.modal__info a, .modal__info1 a{
+	font-size: 18px;
+}
+.openModalBtn1, .openModalBtn{
+  min-width: 170px;
+  max-width: 360px;
+  min-height: 175px;
+  max-height: 250px;
+}
+.projects{
+	display: grid;
+}
+.openModalBtn{
+	margin-top: 20%;
+	margin-left: 0;
+}
+.content2 h2{
+	font-size: 23px;
+}
+footer a{
+margin-left: 19%;
+}
 }
 @media(max-width: 350px){
 	.head{
@@ -180,11 +212,24 @@ nav img{
 	margin-left: 15%;
 }
 footer a{
-margin-left: 20%;
+margin-left: 15%;
+}
+.modal__info, .modal__info1{
+	width: 265px;
+	height: 420px;
+	padding: 50px;
 }
 }
 @media(max-width: 290px){
 	.content__block4{
 	background-size: 345%;
+}
+.modal__info, .modal__info1{
+	width: 245px;
+	height: 410px;
+	padding: 50px;
+}
+footer a{
+margin-left: 11%;
 }
 }
