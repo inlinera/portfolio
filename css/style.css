@@ -111,7 +111,7 @@ nav a:hover:before {
 	color: #fff;
 	font-size: 35px;
 }
-.content {
+.content{
 	position: relative;
 	display: grid;
 	width: 100%;
@@ -136,71 +136,56 @@ transition: all .5s;
 .content__mini_btn h2:hover{
 cursor: pointer;
 }
-/*Подобные изображения на заднем фоне
-были задуманы изначально*/
-.content__block1, .content__block2,
-.content__block3, .content__block4{
+/*рандомная настройка бэкграунд
+изображений*/
+.content__allblocks .content__relative{
 	display: flex;
 	width: 100%;
 	height: 400px;
 	overflow: hidden;
 	transition: all .3s;
+	background-size: cover;
+	margin-top: 0;
 }
 .content__block1{
 	background: url('../img/js-banner.jpg') no-repeat;
-	background-size: 100%;
-	margin-top: 0;
 }
 .content__block2{
 	background: url('../img/css-banner.jpg') no-repeat;
-	background-size: 100%;
-	margin-top: 0;
 }
 .content__block3{
 	background: url('../img/html-banner.jpg') no-repeat;
-	background-size: 100%;
-	margin-top: 0;
 }
 .content__block4{
 	background: url('../img/git-banner.jpg') no-repeat;
-    background-size: 100%;
-    margin-top: 0;
 }
-.block__shadow, .block__shadow1,
-.block__shadow2, .block__shadow3{
+.bg-shadow-block{
 background-color: rgba(0, 0, 0, 0.3);
 width: 100%;
 color: #fff;
 }
-.block__shadow h2,
-.block__shadow1 h2,
-.block__shadow2 h2,
-.block__shadow3 h2{
+.bg-shadow-block h2{
 	font-size: 35px;
 	float: left;
 	margin: 2% 6%;
 	text-shadow: 0 0 10px #fff;
 }
+.bg-shadow-block h2::first-letter{
+font-size: 40px;
+}
 .block__shadow h2::first-letter{
-	font-size: 40px;
 	color: #F0E68C;
 }
 .block__shadow1 h2::first-letter{
-	font-size: 40px;
 	color: rgba(135, 206, 235, 0.8);
 }
 .block__shadow2 h2::first-letter{
-	font-size: 40px;
 	color: #FFA500;
 }
 .block__shadow3 h2::first-letter{
-font-size: 40px;
 color: #DC143C;
 }
-.block__shadow p,
-.block__shadow1 p,
-.block__shadow2 p,
-.block__shadow3 p{
+.bg-shadow-block p{
 	font-size: 22px;
 	float: left;
 	text-align: left;
@@ -269,42 +254,6 @@ background: #A9A9A9;
   align-items: center;
   background-color: #fff;
 }
-/*  */
-.image-album1, .image-album2{
-	height: 290px;
-	width: 100%;
-	border: 1px solid #000;
-	background-color: #fff;
-}
-.projects{
- display: flex;
- justify-content: center;
- width: 100%;
- margin-top: 5%;
-}
-footer{
-	position: relative;
-	display: flex;
-	border-top: 2px solid #000;
-	margin-top: 10%;
-	align-items: center;
-	background: #00CED1;
-}
-footer h3{
-	margin: 3% 5%;
-}
-footer a{
-color: #000;
-margin-left: 50%;
-font-size: 20px;
-font-weight: 600;
-transition: all .3s;
-margin-right: 5px;
-}
-footer a:hover{
-	color: orange;
-	transition: all .3s;
-}
 .openModalBtn{
 	margin-left: 5%;
 }
@@ -351,4 +300,40 @@ transition: all .3s;
 }
 .closeModalBtn, .closeModalBtn1{
 border: 2px solid #000;
+}
+/*  */
+.image-album1, .image-album2{
+	height: 290px;
+	width: 100%;
+	border: 1px solid #000;
+	background-color: #fff;
+}
+.projects{
+ display: flex;
+ justify-content: center;
+ width: 100%;
+ margin-top: 5%;
+}
+footer{
+	position: relative;
+	display: flex;
+	border-top: 2px solid #000;
+	margin-top: 10%;
+	align-items: center;
+	background: #00CED1;
+}
+footer h3{
+	margin: 3% 5%;
+}
+footer a{
+color: #000;
+margin-left: 50%;
+font-size: 20px;
+font-weight: 600;
+transition: all .3s;
+margin-right: 5px;
+}
+footer a:hover{
+	color: orange;
+	transition: all .3s;
 }
